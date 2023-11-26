@@ -67,19 +67,19 @@ print(f"Итоговые очки выживания: {survival_matrix[len(stuff
 
 
 
-# #Допзадание
+#Допзадание
 
-# # Максимальное количество ячеек в рюкзаке
-# max_cells = 7
+# Максимальное количество ячеек в рюкзаке
+max_cells = 7
 
-# valid_combinations = []
-# for r in range(1, len(stuff_dict) + 1):
-#     for combination in combinations(stuff_dict.keys(), r):
-#         total_space = sum(stuff_dict[item][1] for item in combination)
-#         total_survival_points = sum(stuff_dict[item][2] for item in combination)
-#         if total_space <= max_cells and total_survival_points > 0:
-#             valid_combinations.append(combination)
+valid_combinations = []
+for r in range(1, len(stuff_dict) + 1):
+    for combination in combinations(stuff_dict.keys(), r):
+        total_space = sum(stuff_dict[item][1] for item in combination)
+        total_survival_points = sum(stuff_dict[item][2] for item in combination)
+        if total_space <= max_cells and total_survival_points > 0:
+            valid_combinations.append(combination)
 
-# # Выводим найденные комбинации
-# for i, combination in enumerate(valid_combinations, 1):
-#     print(f"Комбинация {i}: {combination}")
+# Выводим найденные комбинации
+for i, combination in enumerate(valid_combinations, 1):
+    print(f"Комбинация {i}: {combination}")
